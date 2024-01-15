@@ -25,6 +25,6 @@ Creio que conseguir cumprir pelo menos 50% do que foi proposto no desafio, minha
 Mas venho estudando para aprimorá-las.
 
 
-Ser fullstack não é fácil, mas é diveritido as vezes perder uns neurônios por conta de um ";"! 😉  
+Ser fullstack não é fácil, mas é divertido as vezes perder uns neurônios por conta de um ";"! 😉  
 
 Thanks You! :blue_heart:
