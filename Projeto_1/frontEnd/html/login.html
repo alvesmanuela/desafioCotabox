@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manuela Alves">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/global.css">
+
+</head>
+
+<body class="centralize">
+
+    <!-- Esse formulario não está em uma estrutura semantica pois a ideia foi focar na criação do usuario e os dados obrigatorios a serem preenchidos -->
+    <form>
+        <div class="form-field" id="form">
+            <div><label>Email</label> </div>
+            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="Seu@email.com" />
+            <div class="error" id="email-required-error">E-mail é obrigátorio</div>
+            <div class="error" id="email-invalid-error">E-mail é inválido</div>
+        </div>
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha" />
+            <div class="error" id="password-required-error"> Senha é obrigátorio</div>
+        </div>
+        <div>
+            <button type="button" class="clear" id="recover-password-botton" onclick="recoverPassword()" disabled="true">Recuperar senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline" onclick="register()">Novo Cadastro</button>
+        </div>
+    </form>
+
+
+    <!-- Linkando os scripts-->
+    <script src="../js/login.js"></script>
+    <script src="../js/loading.js"></script>
+    <script src="../js/validacao.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+
+    <!-- Conexão com o banco de dados do firebase-->
+    <script src="../js/firebase-init.js"></script>
+    <script src="../js/user-auth.js"></script>
+
+
+</body>
+
+
+
+</html>

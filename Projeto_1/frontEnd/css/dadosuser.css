@@ -1,0 +1,46 @@
+ol {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+ol li {
+    cursor: pointer;
+    background: #eaf9ff;
+    padding: 8px 16px;
+    border: 1px solid gray;
+    border-left: 10px solid #17b6f5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+ol li:hover {
+    opacity: 0.8;
+    background: #a0d9f3;
+}
+
+p,
+b {
+    margin: 4px 0;
+}
+
+section {
+    margin: 0 auto;
+    padding: 10px;
+    width: -webkit-fill-available;
+}
+
+ol li:hover button.outline.delete {
+    display: block;
+}
+
+button.delete {
+    display: none;
+    background-color: #ffbebe;
+    width: 100px;
+    margin-block-end: auto;
+    cursor: pointer;
+}

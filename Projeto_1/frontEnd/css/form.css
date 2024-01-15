@@ -1,0 +1,10 @@
+.errorForm {
+    text-align: center;
+    background: #fbeeee;
+    color: #fc0000;
+    display: none;
+    padding: 4px 1px 2px 1px;
+    border-radius: 2px;
+    border-left: 5px solid #fc0000;
+    margin: 10px;
+}

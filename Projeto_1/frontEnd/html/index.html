@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manuela Alves">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dadosuser.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/form.css">
+
+
+</head>
+
+<body>
+    <!--Header with form-->
+    <header class="conteiner">
+        <form class="form" method="post">
+            <div>
+                <input class="information" id="name" onchange="onChangeName()" type="text" name="firtsname" minlength="3" maxlength="15" placeholder="Nome">
+
+                <div class="errorForm" id="name-required-error">Nome é obrigátorio</div>
+
+            </div>
+            <div>
+                <input class="information" id="last" type="text" name="lastname" minlength="3" maxlength="50" placeholder="Sobrenome" onchange="onChangeLast()">
+                <div class="errorForm" id="last-required-error">Sobrenome é obrigátorio</div>
+            </div>
+            <div>
+                <input class="information" id="part" type="number" name="participation" min="0" max="100" placeholder="Participação" onchange="onChangePart()">
+                <div class="errorForm" id="part-required-error">Participação é obrigátorio</div>
+                <div class="errorForm" id="part-incorret-required-error">Valor deve ser maior que 0%</div>
+            </div>
+            <button type="button" class="btn" onclick="saveTransaction()" id="save-button" disabled> Salvar </button>
+
+        </form>
+
+        <button class="btn-out" type="buttons" onclick="logout()"> Sair </button>
+    </header>
+
+    <!-- Header Fim-->
+
+    <!-- Main - part 1. Article | part.2 Section-->
+    <main class="principal">
+        <article class="art">
+            <h1 class="artpart"> PARTICIPAÇÃO DOS FUNCIONÁRIOS </h1>
+            <p class="artpart">Com os dados presentes na lista, podemos acompanhar a participação dos funcionários.</p>
+        </article>
+        <!-- lista-->
+        <section>
+            <ol id="transactions">
+            </ol>
+
+        </section>
+        <!-- grafico-->
+        <section>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+
+        </section>
+
+    </main>
+    <!--Fim do Main-->
+
+    <footer>
+
+    </footer>
+
+    <!-- Conexão com o banco de dados do firebase-->
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore-compat.js"></script>
+
+    <!-- Linkando os scripts-->
+    <script src="../js/firebase-init.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/loading.js"></script>
+    <script src="../js/transaction.js"></script>
+    <script src="../js/service.js"></script>
+
+    <!-- Grafico -->
+    <!-- Tentei adicionar o Chart e criar um lógica para o grafico ser exibido mais não deu certo :( -->
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+    <!-- Fim Grafico -->
+
+
+</body>
+
+</html>

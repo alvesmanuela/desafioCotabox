@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manuela Alves">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/register.css">
+
+
+
+</head>
+
+<body class="centralize">
+    <!-- Esse formulario não está em uma estrutura semantica pois a ideia foi focar na criação do usuario e os dados obrigatorios a serem preenchidos -->
+    <!--Start form-->
+    <form>
+        <div class="form-field">
+            <div><label>Email:</label></div>
+            <input type="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com" />
+
+        </div>
+        <!--Criando mensagens de erro caso o usuario não preencha o campo de e-mail corretamente-->
+        <div class="error" id="email-required-error">E-mail é obrigátorio</div>
+        <div class="error" id="email-invalid-error">E-mail é inválido</div>
+
+
+        <div class="form-field">
+            <div><label>Senha:</label></div>
+            <input type="password" id="password" onchange="onChangePassword()" placeholder="Senha" />
+        </div>
+
+        <!--Criando mensagens de erro caso o usuario não preencha o campo de senha corretamente-->
+        <div class="error" id="password-required-error"> Senha é obrigátorio </div>
+        <div class="error" id="password-min-length-error"> Senha deve ter pelo menos 6 caracteres</div>
+
+        <div class="form-field">
+            <div><label>Confirma senha:</label></div>
+            <input type="password" id="confirmPassword" onchange="onChangeConfirmPassword()" placeholder="Confirmar senha" />
+        </div>
+
+        <!--Criando mensagens de erro caso o usuario não preencha o campo de confirmação de senha corretamente-->
+        <div class="error" id="password-doesnt-match-error"> Senha e Confirmar senha devem ser iguais</div>
+
+        <div>
+            <button type="button" class="solid" disabled="true" onclick="register()" id="register-button">Registrar</button>
+        </div>
+
+        <div>
+            <button type="button" class="clear">LOGIN</button>
+        </div>
+
+    </form>
+    <!--End form-->
+
+    <script src="../js/loading.js"></script>
+    <script src="../js/register.js"></script>
+    <script src="../js/validacao.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <!-- Conexão com o banco de dados do firebase-->
+    <script src="../js/firebase-init.js"></script>
+    <script src="../js/user-auth.js"></script>
+</body>
+
+</html>

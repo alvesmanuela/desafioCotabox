@@ -1,0 +1,22 @@
+/*style da page register*/
+
+body {
+    background: #00bbf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 300px;
+}
+
+input {
+    border: none;
+}
+
+button {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
